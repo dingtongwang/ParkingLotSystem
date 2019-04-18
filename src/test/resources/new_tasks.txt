@@ -1,0 +1,27 @@
+Given 来了一辆车，没有牌照
+When 停车
+Then 停车失败
+
+Given 来了一辆车，有牌照，两个停车场均满
+When 停车
+Then 停车失败
+
+Given 来了一辆车，有牌照，两个停车场中已停放有对应牌照的车
+When 停车
+Then 停车失败
+
+Given 来了一辆车，有牌照，第一个停车场未满
+When 停车
+Then 停车至第一个停车场，出票
+
+Given 来了一辆车，有牌照，第一个停车场已满，第二个停车场未满
+When 停车
+Then 停车至第二个停车场，出票
+
+Given 一张无效的票
+When 取车
+Then 取车失败
+
+Given 一张有效的票
+When 取车
+Then 取车成功
